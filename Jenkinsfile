@@ -17,7 +17,7 @@ pipeline {
 
         stage('Run Tests') {
           steps {
-            sh 'python3 -m venv env && chmod +x env/bin/activate && ./env/bin/activate && ls -a && pip install -r requirements.txt && python -m pytest'
+            sh 'python3 -m venv env && chmod +x env/bin/activate && ./env/bin/activate && ls -a && env/bin/pip install -r requirements.txt && env/bin/python -m pytest'
           }
         }
 
