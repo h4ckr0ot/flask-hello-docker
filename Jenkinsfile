@@ -15,9 +15,9 @@ pipeline {
           }
         }
 
-        stage('Run Test') {
+        stage('Run Tests') {
           steps {
-            sh 'python3 -m venv env && chmod +x env/bin/activate && ./env/bin/activate && env/bin/pip install flask && pip freeze > requirements.txt && ls -a && env/bin/python3 app.py'
+            sh 'python3 -m venv env && chmod +x env/bin/activate && ./env/bin/activate && ls -a && pip install -r requirements.txt && python -m pytest'
           }
         }
 
