@@ -19,5 +19,11 @@ pipeline {
       }
     }
 
+    stage('Push to Docker Hub') {
+      steps {
+        sh 'docker push ravesn/simple-flask-app:v0.0.1'
+      }
+    }
+
   }
 }
