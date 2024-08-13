@@ -13,5 +13,11 @@ pipeline {
       }
     }
 
+    stage('Build') {
+      steps {
+        sh 'docker build . -t ravesn/simple-flask-app:v0.0.1'
+      }
+    }
+
   }
 }
