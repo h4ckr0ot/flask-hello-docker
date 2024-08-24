@@ -1,5 +1,5 @@
 # base python docker image
-FROM python:3.9-bullseye
+FROM python:3.9-slim-bullseye
 
 # adding the files into docker directory
 ADD . /app
