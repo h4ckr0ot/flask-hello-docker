@@ -20,7 +20,7 @@ pipeline {
     }
 
     stage('Push to Docker Hub') {
-      withDockerRegistry([ credentialsId: "docker-hub", url: "" ]) {
+      docker.withRegistry('', 'docker-hub') {
           sh 'docker push ravesn/simple-flask-app:v0.0.1'
         }
       }
