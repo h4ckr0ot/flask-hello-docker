@@ -22,7 +22,7 @@ pipeline {
     stage('Push to Docker Hub') {
       steps {
         withDockerRegistry([ credentialsId: "docker-hub", url: "" ]) {
-          sh 'docker push ravesn/simple-flask-app:v0.0.1'
+          bat 'docker push ravesn/simple-flask-app:v0.0.1'
         }
       }
     }
